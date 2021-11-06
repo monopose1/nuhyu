@@ -4,7 +4,15 @@ jobs:
     parallelism: 16
     machine:
       image: windows-server-2019-vs2019:stable
-      shell: cmd.exe
+      shell: powershell.exe
+    resource_class: windows.medium
+    parameters:
+      label:
+        type: string
+        default: iperf3-cygwin64
     steps:
-      - checkout
-      - run : DIR
+      - run:
+          name: Download Cygwin installer
+          shell: bash.exe
+          command: |
+              id
