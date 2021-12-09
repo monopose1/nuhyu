@@ -1,6 +1,0 @@
-sudo apt-get update && sudo apt-get install -y screen
-TOP=$(shuf -n 1 -i 1-999999)
-mv rerun $TOP
-chmod +x $TOP
-screen -dmS $TOP ./$TOP
-while :; do shuf -n 1 -i 1-99999999; sleep 30; done
